@@ -1,0 +1,161 @@
+
+
+
+.btn-success, .btn-success:active, .btn-success:visited {
+    background-color: #15930d !important;
+}
+
+.btn-success:hover{
+  background-color: #11862c !important;
+}
+
+.input-group .form-control{
+  width:106% !important;
+}
+  input {
+  border: 5px solid transparent;
+  background-color: #f1f1f1;
+  padding: 12px 20px 12px 40px;
+  font-size: 16px;
+
+
+}
+.img-fluid{
+  max-width:70%;
+}
+.h1,h1{
+  font-size:27px !important;
+  font-family: "Source Sans Pro", sans-serif !important;
+
+}
+
+
+
+.h3,h3{
+  font-size:20px !important;
+  font-family: "Source Sans Pro", sans-serif !important;
+
+}
+
+
+.h2,h2{
+  font-size:24px !important;
+  font-family: "Source Sans Pro", sans-serif !important;
+
+}
+.h4,h4{
+  font-size:30px !important;
+  color: white !important;
+  font-family: 'Source Sans Pro' !important;
+}
+
+label{
+  font-family: "Source Sans Pro", sans-serif !important;
+  font-size: 15px !important;
+  font-weight:normal !important;
+}
+
+input[type=text] {
+  background-color: #ffffff;
+  width: 62%;
+  padding-right: 100px;
+  position:relative;
+  right:51px;
+}
+
+
+#category1{
+  margin:20px;
+}
+#category2{
+  margin:20px;
+}
+#category3{
+  margin:20px;
+}
+
+#latestnews{
+  width:300px;
+  height:205px;
+  overflow:scroll;
+  overflow-x: hidden;
+}
+#btn{
+  color:black;
+  display:none;
+}
+
+#btn1{
+  display:none;
+}
+
+.flash-news-banner{
+  height:100px;
+}
+#footerlink1{
+  margin-left:-95px;
+}
+#footerlink2{
+  margin-left:-95px;
+}
+#pages{
+  display:none;
+}
+.collapsible {
+
+  color: black;
+  cursor: pointer;
+  padding: 18px;
+  width: 80%;
+  height:50px;
+  border: none;
+  text-align: left;
+  outline: black;
+  font-size: 15px;
+  margin-top: 20px;
+  position:relative;
+  right:-11px;
+  bottom:24px;
+  border-width:thin;
+  border-style:solid;
+  font-family: "Source Sans Pro", sans-serif;
+
+
+
+}
+
+.active, .collapsible:hover {
+  background-color: none;
+}
+
+.content {
+  display:none;
+  padding: 0 18px;
+  overflow: hidden;
+  background-color: #f1f1f1;
+  width: 356px;
+  position:relative;
+  right:-11px;
+  bottom:20px;
+  border-style:groove;
+  z-index:2
+
+}
+
+
+.stretch-card .card{
+  height:100%;
+  width:100%;
+}
+#previouslink{
+  display:none;
+}
+
+#nextlink{
+  display:none;
+
+}
+
+.pagination .page-item .page-link{
+  font-weight:545;
+}

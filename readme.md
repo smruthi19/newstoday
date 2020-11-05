@@ -1,5 +1,5 @@
 # Newstoday
-![](images/newstodayhomepage.PNG)
+![](visualsforreadme/newstodayhomepage.PNG)
 
 
 

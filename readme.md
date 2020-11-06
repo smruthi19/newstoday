@@ -46,6 +46,12 @@ Search Example
 Multiple Pages buttons
 
 
+<img src="visualsforreadme/multiplepages.PNG" width="500">
+
+
+
+
+
 
 
 # Technologies

@@ -24,7 +24,7 @@ On load of the home page, the latest five top headlines from each category is di
 The user has the option to also search for any keyword in the search bar and can select one or more categories to filter the search by. The corresponding articles, with their titles, links, descriptions, dates published, images, and sources are displayed by category. If there is more than one page of results, the next page button will allow the user to continue to view more articles related to their search. There is also a previous page button to go back. 
 
 
-The web application also includes a help icon feature, which links to an FAQ page. 
+The web application also includes an about page, and a help icon feature, which links to an FAQ page. 
 
 # Visuals
 Search Feature

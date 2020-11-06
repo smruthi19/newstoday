@@ -9,10 +9,10 @@ A web application using News API that allows users to search for news in the thr
 # Features
 - Search news by keyword 
 - Search news by keyword and by selected categories (Entertainment, Technology, Sports)
-- Matching filtered news results by category based on search keyword
+- Matched filtered news results by category based on search keyword
 - Article headline, link, image, source, date published, and description for each search result
 - Latest top headlines for news in entertainment, technology, sports
-- Help icon for displaying FAQ
+- Help icon for accessing FAQ
 
 
 # Development Process

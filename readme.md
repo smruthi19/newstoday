@@ -34,6 +34,20 @@ Search Feature
 
 
 
+
+<br> </br>
+
+Search Example
+![](visualsforreadme/searchexample.PNG)
+
+
+<br> </br>
+
+Multiple Pages buttons
+
+
+
+
 # Technologies
 - Bootstrap
 - JavaScript

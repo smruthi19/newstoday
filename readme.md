@@ -80,7 +80,7 @@ Next, cd into this repository folder that you just stored and cd into the newsto
 
 Next, type the command: python -m http.server
 
-Then, you should see the message: "Serving HTTP on 0.0.0.0 port 8000 (http://0.0.0.0:8000/) ..."
+Then, you should see the following message. (See picture below).
 
 <img src="visualsforreadme/runlocal.PNG" width="500">
 

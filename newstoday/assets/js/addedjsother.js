@@ -3,10 +3,10 @@
 //function for autoscroll to news results once searched
 
 function scrollwindow(){
-  window.scrollBy(0,850)
+  window.scrollBy(0,600)
 }
 function scrollwindowlink(){
-  window.scroll(0,800);
+  window.scroll(0,500);
 
 }
 
@@ -25,7 +25,7 @@ function scrollwindowlink(){
                   }
 
                 }
-                console.log(selectedinputs);
+                // console.log(selectedinputs);
                 return selectedinputs;
                 }
 
@@ -59,7 +59,7 @@ function scrollwindowlink(){
                var urlfirsthalf="https://newsapi.org/v2/top-headlines?";
                var urlsecondhalf="category=" +categoryinput+ "&apiKey=78b9d599c4f94f8fa3afb1a5458928d6";
                var url=urlfirsthalf+urlsecondhalf;
-               console.log("url"+url);
+               // console.log("url"+url);
                var title;
                var Request=new XMLHttpRequest();
                Request.open('GET',url, false);
@@ -74,23 +74,23 @@ function scrollwindowlink(){
                return;
                }
                var information=JSON.parse(Request.responseText);
-               console.log(information);
-               console.log(information.articles.length +"length");
+               // console.log(information);
+               // console.log(information.articles.length +"length");
                //loop to iterate through articles in information object, and store title, article link, image, description and date respectively for each article.
                for (var infoindex=0;infoindex<12;infoindex++){
                  var title= " " +information.articles[infoindex].title;
-                 console.log(information.articles[infoindex].title +"titles");
+                 // console.log(information.articles[infoindex].title +"titles");
                  var urlink=information.articles[infoindex].url;
                  var img=information.articles[infoindex].urlToImage;
                  var description = information.articles[infoindex].description;
 
                  var date=information.articles[infoindex].publishedAt;
                  var source=information.articles[infoindex].source.name;
-                 console.log(source+"source");
-
-                 console.log(title);
-                 console.log(urlink);
-                 console.log(description+"description");
+                 // console.log(source+"source");
+                 //
+                 // console.log(title);
+                 // console.log(urlink);
+                 // console.log(description+"description");
 
                  //create HTML elements for displaying news feed
                  var image=document.createElement('img');
@@ -103,7 +103,7 @@ function scrollwindowlink(){
                  //check if source is null
                  if (source==null || source==""){
                    source="No source available";
-                   console.log(source);
+                   // console.log(source);
                  }
 
 
@@ -111,7 +111,6 @@ function scrollwindowlink(){
                  //alternate image if image is null
                  if(img==null){
                    image.setAttribute("src","https://thumbs.dreamstime.com/b/no-image-available-icon-flat-vector-no-image-available-icon-flat-vector-illustration-132482930.jpg");
-                   console.log("Yes!");
                    image.setAttribute("width","100px");
                    image.setAttribute("height","100px");
                    image.setAttribute("alt","image");
@@ -220,7 +219,7 @@ function loadhomenews(input){
     var urlfirsthalf="https://newsapi.org/v2/top-headlines?";
     var urlsecondhalf="category=" +input+ "&apiKey=78b9d599c4f94f8fa3afb1a5458928d6";
     var url=urlfirsthalf+urlsecondhalf;
-    console.log("url"+url);
+    // console.log("url"+url);
     var title;
 //API Request
     var Request=new XMLHttpRequest();
@@ -236,24 +235,24 @@ function loadhomenews(input){
     return;
     }
     var information=JSON.parse(Request.responseText);
-    console.log(information);
-    console.log(information.articles.length +"length");
+    // console.log(information);
+    // console.log(information.articles.length +"length");
     //loop to iterate through json object and store respective title, article link, image, description, and date.
     for (var index=0;index<6;index++){
       var title= " " +information.articles[index].title;
-      console.log(information.articles[index].title +"titles");
+      // console.log(information.articles[index].title +"titles");
       var urlink=information.articles[index].url;
       var img=information.articles[index].urlToImage;
       var description = information.articles[index].description;
 
       var date=information.articles[index].publishedAt;
       var source=information.articles[index].source.name;
-      console.log(source+"source");
-
-
-      console.log(title);
-      console.log(urlink);
-      console.log(description+"description");
+      // console.log(source+"source");
+      //
+      //
+      // console.log(title);
+      // console.log(urlink);
+      // console.log(description+"description");
 
       //creating HTML elements to display the news feed content.
       var image=document.createElement('img');
@@ -265,13 +264,12 @@ function loadhomenews(input){
       //check if source is null
       if (source==null || source==""){
         source="No source available";
-        console.log(source);
+        // console.log(source);
       }
       //alternate image code if image is null.
 
       if(img==null){
         image.setAttribute("src","https://thumbs.dreamstime.com/b/no-image-available-icon-flat-vector-no-image-available-icon-flat-vector-illustration-132482930.jpg");
-        console.log("Yes!");
         image.setAttribute("width","100px");
         image.setAttribute("height","100px");
         image.setAttribute("alt","image");
@@ -387,17 +385,17 @@ function loadlatestnews(){
   return;
   }
   var information=JSON.parse(Request.responseText);
-  console.log(information);
-  console.log(information.articles.length +"length");
+  // console.log(information);
+  // console.log(information.articles.length +"length");
   //loop to iterate through json object from API and store respective article title, link, date.
   for (var index=0;index<4;index++){
     var title= " " +information.articles[index].title;
-    console.log(information.articles[index].title +"titles");
+    // console.log(information.articles[index].title +"titles");
     var urlink=information.articles[index].url;
     var date=information.articles[index].publishedAt;
 
-    console.log(title);
-    console.log(urlink);
+    // console.log(title);
+    // console.log(urlink);
 
 //create HTML elements to display the article headline titles, links and dates on the panel.
     var para=document.createElement("P");
@@ -448,15 +446,15 @@ function loadlatestnews(){
 
 //function that takes user's search input and page to laod news based on user's selected categories and sorts the news based on the selected categories with respective tags.
       function loadcategorynews(myinput,page){
-        console.log(page);
-        console.log("page");
+        // console.log(page);
+        // console.log("page");
 
 //functions to clear all previous content in the container.
         clearhome();
         clearcontainer();
         clearpreviouslinkcontent();
         var categoryinput;
-        console.log("myinputfromfunction"+myinput);
+        // console.log("myinputfromfunction"+myinput);
         //storing return value of boxchecked, which is the user's selected categories.
         var selectedcategories=boxchecked();
 
@@ -467,10 +465,10 @@ function loadlatestnews(){
             counter=counter+1;
           }
         }
-        // var allblankinputs=false;
+
         //code for if user has not selected any categories and just searched keyword. Loads news in all three categories using "q=" parameter based on user's search input.
         if (counter==3){
-          // allblankinputs=true;
+
           var loadinputs=["Entertainment", "Technology", "Sports"];
 
           for (var nocategoryindex=0; nocategoryindex<selectedcategories.length; nocategoryindex++){
@@ -485,7 +483,7 @@ var numberofblanks=0;
 //loop to iterate through selectedcategories and convert user's selected categories into type string.
         for (var index=0; index<selectedcategories.length;index++){
 
-          console.log(selectedcategories[index]+"selectedinputs");
+          // console.log(selectedcategories[index]+"selectedinputs");
            categoryinput=selectedcategories[index].toString();
            //check if selected categories are not blank and then create respective category tags to display.
            if (selectedcategories[index]==""){
@@ -506,7 +504,7 @@ var numberofblanks=0;
         var urlfirsthalf="https://newsapi.org/v2/top-headlines?"
         var urlsecondhalf= "q=" + myinput + "&"+"page="+page+"&sortBy=relevancy&category=" + categoryinput + "&apiKey=78b9d599c4f94f8fa3afb1a5458928d6";
         var url=urlfirsthalf+urlsecondhalf;
-        console.log("url"+url);
+        // console.log("url"+url);
         var title;
         //API Request
         var Request=new XMLHttpRequest();
@@ -522,16 +520,16 @@ var numberofblanks=0;
         return;
         }
         var information=JSON.parse(Request.responseText);
-        console.log(information);
-        console.log(information.articles.length +"length");
+        // console.log(information);
+        // console.log(information.articles.length +"length");
 //page count based on TotalResults
         var totalResults=(parseFloat(information.totalResults));
         var pagecount=Math.ceil((totalResults/20));
-        console.log(totalResults+"totalResults");
+        // console.log(totalResults+"totalResults");
 
 
 
-        console.log(pagecount+"pagecount");
+        // console.log(pagecount+"pagecount");
         pagecountbycategory[index]=pagecount;
         if (page==1){
           document.getElementById("nextlink").style.marginLeft="475px";
@@ -558,11 +556,11 @@ var numberofblanks=0;
 
 
 
-        console.log("results");
+        // console.log("results");
 //iterate through json object from API to store articles titles, links, descriptions, images, dates.
         for (var informationindex=0;informationindex<information.articles.length;informationindex++){
           var title= " " +information.articles[informationindex].title;
-          console.log(information.articles[informationindex].title +"titles");
+          // console.log(information.articles[informationindex].title +"titles");
           var urlink=information.articles[informationindex].url;
           var img=information.articles[informationindex].urlToImage;
           var description = information.articles[informationindex].description;
@@ -570,9 +568,9 @@ var numberofblanks=0;
           var date=information.articles[informationindex].publishedAt;
           var source=information.articles[informationindex].source.name;
 
-          console.log(title);
-          console.log(urlink);
-          console.log(description+"description");
+          // console.log(title);
+          // console.log(urlink);
+          // console.log(description+"description");
           //create the elements to display the data
           var image=document.createElement('img');
           var secondparaspace=document.createElement("P");
@@ -586,13 +584,13 @@ var numberofblanks=0;
             //check if source is null
             if (source==null || source==""){
               source="No source available";
-              console.log(source);
+              // console.log(source);
             }
 
             //alternate image if image is null
           if(img==null){
             image.setAttribute("src","https://thumbs.dreamstime.com/b/no-image-available-icon-flat-vector-no-image-available-icon-flat-vector-illustration-132482930.jpg");
-            console.log("Yes!");
+
             image.setAttribute("width","100px");
             image.setAttribute("height","100px");
             image.setAttribute("alt","image");
@@ -676,9 +674,9 @@ var numberofblanks=0;
 
     }
       }
-      console.log(selectedcategories.length+"selectedcategorieslength");
-      console.log(numberofblanks +"numberofblanks");
-      console.log(zeroresultcounter+"zeroresultcounter");
+      // console.log(selectedcategories.length+"selectedcategorieslength");
+      // console.log(numberofblanks +"numberofblanks");
+      // console.log(zeroresultcounter+"zeroresultcounter");
 
     //count how many of the categories selected have 0 pages of results and count what is the max number of pages needed.
       var max=0;
@@ -696,14 +694,14 @@ var numberofblanks=0;
 
       if (page==max){
         document.getElementById("nextlink").style.visibility="hidden";
-        console.log("First if statement!");
+
 
       }
 //if the count of the number of categories with zero results equals the number of categories the user selected (all selected categories have zero results), then hide both next and previous page elements.
     else if (zeroresultcounter==(selectedcategories.length-numberofblanks)){
       document.getElementById("nextlink").style.visibility="hidden";
       document.getElementById("previouslink").style.visibility="hidden";
-      console.log("secondifstatement!!");
+
 
     }
 
@@ -713,11 +711,11 @@ var numberofblanks=0;
 
 
 //return the current page
-      console.log(page+"pagebeingreturned");
+      // console.log(page+"pagebeingreturned");
       var pagenumber=document.createElement("p");
       pagenumber.innerHTML=page;
       document.getElementById("pagenumber").append(page);
-      console.log(pagecountbycategory+"pagecountbycategory");
+      // console.log(pagecountbycategory+"pagecountbycategory");
       return page;
 
 
@@ -729,13 +727,13 @@ var numberofblanks=0;
       function nextpage(){
       document.getElementById("previouslink").style.display="block";
       var currentpage=document.getElementById('pagenumber').innerHTML;
-      console.log(currentpage + "currentpage");
+      // console.log(currentpage + "currentpage");
 
       var previousinputvalue=getInputValue();
       clearcontainer();
       //updates page by calling loadcategorynews with the user's previous input value and adding one to the current page.
       updatedpage=loadcategorynews(previousinputvalue,Number(currentpage)+1);
-      console.log(updatedpage+"updatedpage");
+      // console.log(updatedpage+"updatedpage");
       pagenumber.innerHTML="";
       pagenumber.innerHTML=updatedpage;
 
@@ -750,7 +748,7 @@ var numberofblanks=0;
 //function for when user selects previous page item.
       function previouspage(){
         var currentpage=document.getElementById('pagenumber').innerHTML;
-        console.log(currentpage + "currentpage");
+        // console.log(currentpage + "currentpage");
     //hides previous page element if the current page is 1.
         if (currentpage==1){
           document.getElementById("previouslink").style.display="none";
@@ -759,7 +757,7 @@ var numberofblanks=0;
         clearcontainer();
         //calls loadcategorynews with previous input value and currentpage-1 as parameters.
         updatedpage=loadcategorynews(previousinputvalue,Number(currentpage)-1);
-        console.log(updatedpage+"updatedpage");
+        // console.log(updatedpage+"updatedpage");
         pagenumber.innerHTML="";
         pagenumber.innerHTML=updatedpage;
         if (updatedpage==1){
@@ -774,7 +772,7 @@ var numberofblanks=0;
         document.getElementById("pages").style.display="block";
         var inputvalue=document.getElementById("myInput").value;
 
-        console.log(inputvalue);
+        // console.log(inputvalue);
         //calls boxchecked(), clearcontainer(), and loadcategorynews() with inputvalue and page being 1.
         boxchecked();
         clearcontainer();

@@ -27,6 +27,9 @@ The user has the option to also search for any keyword in the search bar and can
 The web application also includes a help icon feature, which links to an FAQ page. 
 
 # Visuals
+Search Feature
+![](visualsforreadme/searchoption.PNG)
+
 
 
 

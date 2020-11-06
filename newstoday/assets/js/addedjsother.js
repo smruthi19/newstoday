@@ -538,7 +538,7 @@ var numberofblanks=0;
 
         else{
           document.getElementById("nextlink").style.marginLeft="518px";
-          document.getElementById("previouslink").style.width="485px";
+          document.getElementById("previouslink").style.width="500px";
             document.getElementById("previouslink").style.position="relative";
               document.getElementById("previouslink").style.top="45px";
         }

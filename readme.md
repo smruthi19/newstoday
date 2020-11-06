@@ -63,11 +63,17 @@ Multiple Pages buttons
 
 # Setup
 To run this code locally, please select the dropdown arrow from the green button "code" at the upper right hand corner of the main page of the repository. 
-
+<img src="visualsforreadme/linktorunlocally.PNG" width="500">
 
 From the dropdown, copy the HTTPS link. Then, open Command Prompt or the terminal that you prefer to use and "cd" into the directory where you would like to store the repository. 
-Then, enter git clone <repo-url> (paste the copied link in the placeholder, without the triangle brackets). Wait until all of the objects have been received and the processing finishes. Then, navigate to your selected directory to check if the repository is there. 
+Then, enter git clone <repo-url> (paste the copied link in the placeholder, without the triangle brackets). Wait until all of the objects have been received and the processing finishes. 
+<img src="visualsforreadme/runcode1.PNG" width="500">
  
+ 
+Then, navigate to your selected directory to check if the repository is there. 
+ 
+ 
+<img src="visualsforreadme/example.PNG" width="500">
  
  
 Next, cd into this repository folder that you just stored and cd into the newstoday subfolder inside of the repository. (See picture below)
@@ -76,9 +82,15 @@ Next, type the command: python -m http.server
 
 Then, you should see the message: "Serving HTTP on 0.0.0.0 port 8000 (http://0.0.0.0:8000/) ..."
 
+<img src="visualsforreadme/runlocal.PNG" width="500">
+
 Next, go to http://localhost:8000/.
 
 You should see the directory listing as shown below. Select newstoday/.
+
+
+<img src="visualsforreadme/directorylist.PNG" width="500">
+
 
 You should then see the website.
 

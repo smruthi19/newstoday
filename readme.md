@@ -62,7 +62,10 @@ Multiple Pages buttons
 
 
 # Setup
-To run this code locally, please 
+To run this code locally, please select the dropdown arrow from the green button "code" at the upper right hand corner of the main page of the repository. From the dropdown, copy the HTTPS link. Then, open Command Prompt or the terminal that you prefer to use and "cd" into the directory where you would like to store the repository. Then,
+enter git clone <repo-url> (paste the copied link in the placeholder, without the triangle brackets). Wait until all of the objects have been received and the processing finishes. Then, navigate to your selected directory to check if the repository is there. 
+ 
+Next, cd into this repository folder that you just stored. 
 
 
 # Other notes

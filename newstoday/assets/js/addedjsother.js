@@ -61,6 +61,22 @@ function scrollwindowlink(){
                var url=urlfirsthalf+urlsecondhalf;
                // console.log("url"+url);
                var title;
+                  
+                  const proxyUrl = "https://cors-anywhere.herokuapp.com/"
+const qInTitle = "";
+const from = "";
+const apiKey = "";
+const url = `${proxyUrl}https://newsapi.org/v2/everything?qInTitle=${qInTitle}&from=${from}language=en&apiKey=${apiKey}`;
+const request = new Request(url);
+
+fetch(request)
+  .then(response => response.json())
+  .then((news) => {
+    console.log(news);
+  })
+  .catch(error => {
+    console.log(error);
+  });
                var Request=new XMLHttpRequest();
                Request.open('GET',url, false);
                Request.send();

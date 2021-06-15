@@ -58,7 +58,7 @@ function scrollwindowlink(){
 // API Request based on which category link the user selected
                var urlfirsthalf="https://newsapi.org/v2/top-headlines?";
                var urlsecondhalf="category=" +categoryinput+ "&apiKey=bc6ba5c090bc4fe492f395b955f50e0f";
-               var url=urlfirsthalf+urlsecondhalf;
+               //var url=urlfirsthalf+urlsecondhalf;
                // console.log("url"+url);
                var title;
                   

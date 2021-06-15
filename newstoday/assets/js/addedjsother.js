@@ -63,7 +63,7 @@ function scrollwindowlink(){
                var title;
                   
                  const proxyUrl = "https://cors-anywhere.herokuapp.com/"
-const qInTitle = "phone";
+const qInTitle = "apple";
 const from = "2021-06-15";
 const apiKey = "bc6ba5c090bc4fe492f395b955f50e0";
 const url = `${proxyUrl}https://newsapi.org/v2/everything?qInTitle=${qInTitle}&from=${from}language=en&apiKey=${apiKey}`;

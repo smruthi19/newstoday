@@ -66,9 +66,9 @@ function scrollwindowlink(){
 const qInTitle = "entertainment";
 const apiKey = "bc6ba5c090bc4fe492f395b955f50e0f";
 const url = `${proxyUrl}https://newsapi.org/v2/everything?qInTitle=${qInTitle}&language=en&apiKey=${apiKey}`;
-const request = new Request(url);
+const Request = new Request(url);
 
-fetch(request)
+fetch(Request)
   .then(response => response.json())
   .then((news) => {
     console.log(news);
@@ -76,9 +76,9 @@ fetch(request)
   .catch(error => {
     console.log(error);
   });
-               var Request=new XMLHttpRequest();
-               Request.open('GET',url, false);
-               Request.send();
+//                var Request=new XMLHttpRequest();
+//                Request.open('GET',url, false);
+//                Request.send();
 
 
                if(Request.readyState!=4 ||  Request.status!= 200 || Request.responseText===""){

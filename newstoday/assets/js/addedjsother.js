@@ -384,59 +384,59 @@ function loadlatestnews(){
 }
 
 //function for loading news feed on latest news panel that users can scroll through. Shows four recent headlines from each of the three categories.
-  function requests(url){
+//   function requests(url){
 
-  //API Request
-  var Request=new XMLHttpRequest();
-  Request.open('GET',url, false);
-  Request.send();
-
-
-  if(Request.readyState!=4 ||  Request.status!= 200 || Request.responseText===""){
-  window.console.error("Request had an error");
-  var error=document.createElement('H3');
-  error.innerHTML="API error."
-  document.getElementById("latestnews").appendchild(error);
-  return;
-  }
-  var information=JSON.parse(Request.responseText);
-  // console.log(information);
-  // console.log(information.articles.length +"length");
-  //loop to iterate through json object from API and store respective article title, link, date.
-  for (var index=0;index<4;index++){
-    var title= " " +information.articles[index].title;
-    // console.log(information.articles[index].title +"titles");
-    var urlink=information.articles[index].url;
-    var date=information.articles[index].publishedAt;
-
-    // console.log(title);
-    // console.log(urlink);
-
-//create HTML elements to display the article headline titles, links and dates on the panel.
-    var para=document.createElement("P");
-    var link=document.createElement('a');
-    var paragraph=document.createElement("P");
-    var paragraph2=document.createElement("P");
-    link.setAttribute('href',urlink);
-
-    link.setAttribute("style", "background-color:none;font-family: Arial; color:white; font-size:15px; font-weight:bold; text-align:center;text-decoration:underline");
-    link.innerHTML=" " +title;
-    link.target="_blank";
-    para.innerHTML="";
-    paragraph.setAttribute("style","font-family:Arial; color:black;font-size:12px;");
-    paragraph2.innerHTML="Published at: " +date;
-    paragraph2.setAttribute("style", "font-family:Verdana; color:white; font-size:10px; font-weight:bold;");
-
-    //append elements to the div id "latestnews"
-    document.getElementById("latestnews").appendChild(para);
-    document.getElementById("latestnews").appendChild(link);
-    document.getElementById("latestnews").appendChild(para);
-    document.getElementById("latestnews").appendChild(paragraph);
-    document.getElementById("latestnews").appendChild(paragraph2);
+//   //API Request
+//   var Request=new XMLHttpRequest();
+//   Request.open('GET',url, false);
+//   Request.send();
 
 
-}
-}
+//   if(Request.readyState!=4 ||  Request.status!= 200 || Request.responseText===""){
+//   window.console.error("Request had an error");
+//   var error=document.createElement('H3');
+//   error.innerHTML="API error."
+//   document.getElementById("latestnews").appendchild(error);
+//   return;
+//   }
+//   var information=JSON.parse(Request.responseText);
+//   // console.log(information);
+//   // console.log(information.articles.length +"length");
+//   //loop to iterate through json object from API and store respective article title, link, date.
+//   for (var index=0;index<4;index++){
+//     var title= " " +information.articles[index].title;
+//     // console.log(information.articles[index].title +"titles");
+//     var urlink=information.articles[index].url;
+//     var date=information.articles[index].publishedAt;
+
+//     // console.log(title);
+//     // console.log(urlink);
+
+// //create HTML elements to display the article headline titles, links and dates on the panel.
+//     var para=document.createElement("P");
+//     var link=document.createElement('a');
+//     var paragraph=document.createElement("P");
+//     var paragraph2=document.createElement("P");
+//     link.setAttribute('href',urlink);
+
+//     link.setAttribute("style", "background-color:none;font-family: Arial; color:white; font-size:15px; font-weight:bold; text-align:center;text-decoration:underline");
+//     link.innerHTML=" " +title;
+//     link.target="_blank";
+//     para.innerHTML="";
+//     paragraph.setAttribute("style","font-family:Arial; color:black;font-size:12px;");
+//     paragraph2.innerHTML="Published at: " +date;
+//     paragraph2.setAttribute("style", "font-family:Verdana; color:white; font-size:10px; font-weight:bold;");
+
+//     //append elements to the div id "latestnews"
+//     document.getElementById("latestnews").appendChild(para);
+//     document.getElementById("latestnews").appendChild(link);
+//     document.getElementById("latestnews").appendChild(para);
+//     document.getElementById("latestnews").appendChild(paragraph);
+//     document.getElementById("latestnews").appendChild(paragraph2);
+
+
+// }
+// }
 
 
 //function for clearing the container, specifically the elements in div id "home".

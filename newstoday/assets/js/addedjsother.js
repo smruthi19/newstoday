@@ -58,28 +58,12 @@ function scrollwindowlink(){
 // API Request based on which category link the user selected
                var urlfirsthalf="https://newsapi.org/v2/top-headlines?";
                var urlsecondhalf="category=" +categoryinput+ "&apiKey=bc6ba5c090bc4fe492f395b955f50e0f";
-               //var url=urlfirsthalf+urlsecondhalf;
+               var url=urlfirsthalf+urlsecondhalf;
                // console.log("url"+url);
                var title;
-                  
-                 const proxyUrl = "https://cors-anywhere.herokuapp.com/"
-const qInTitle = "apple";
-const from = "2021-06-15";
-const apiKey = "bc6ba5c090bc4fe492f395b955f50e0";
-const url = `${proxyUrl}https://newsapi.org/v2/everything?qInTitle=${qInTitle}&from=${from}language=en&apiKey=${apiKey}`;
-const request = new Request(url);
-
-fetch(request)
-  .then(response => response.json())
-  .then((news) => {
-    console.log(news);
-  })
-  .catch(error => {
-    console.log(error);
-  });
-//                var Request=new XMLHttpRequest();
-//                Request.open('GET',url, false);
-//                Request.send();
+               var Request=new XMLHttpRequest();
+               Request.open('GET',url, false);
+               Request.send();
 
 
                if(Request.readyState!=4 ||  Request.status!= 200 || Request.responseText===""){
@@ -233,7 +217,7 @@ function loadhomenews(input){
 
 
     var urlfirsthalf="https://newsapi.org/v2/top-headlines?";
-    var urlsecondhalf="category=" +input+ "&apiKey=bc6ba5c090bc4fe492f395b955f50e0f";
+    var urlsecondhalf="category=" +input+ "&apiKey=78b9d599c4f94f8fa3afb1a5458928d6";
     var url=urlfirsthalf+urlsecondhalf;
     // console.log("url"+url);
     var title;
@@ -374,9 +358,9 @@ function loadhomenews(input){
 //function for loading latest news headlines in the right panel for users to scroll through.
 function loadlatestnews(){
   //urls to pass as parameters into requests function to load latest news headlines from the three different categories.
-  var url1="https://newsapi.org/v2/top-headlines?category=technology&apiKey=bc6ba5c090bc4fe492f395b955f50e0f";
-  var url2="https://newsapi.org/v2/top-headlines?category=sports&apiKey=bc6ba5c090bc4fe492f395b955f50e0f";
-  var url3="https://newsapi.org/v2/top-headlines?category=entertainment&apiKey=bc6ba5c090bc4fe492f395b955f50e0f";
+  var url1="https://newsapi.org/v2/top-headlines?category=technology&apiKey=78b9d599c4f94f8fa3afb1a5458928d6";
+  var url2="https://newsapi.org/v2/top-headlines?category=sports&apiKey=78b9d599c4f94f8fa3afb1a5458928d6";
+  var url3="https://newsapi.org/v2/top-headlines?category=entertainment&apiKey=78b9d599c4f94f8fa3afb1a5458928d6";
 
   requests(url1);
   requests(url2);
@@ -385,59 +369,59 @@ function loadlatestnews(){
 }
 
 //function for loading news feed on latest news panel that users can scroll through. Shows four recent headlines from each of the three categories.
-//   function requests(url){
+  function requests(url){
 
-//   //API Request
-//   var Request=new XMLHttpRequest();
-//   Request.open('GET',url, false);
-//   Request.send();
-
-
-//   if(Request.readyState!=4 ||  Request.status!= 200 || Request.responseText===""){
-//   window.console.error("Request had an error");
-//   var error=document.createElement('H3');
-//   error.innerHTML="API error."
-//   document.getElementById("latestnews").appendchild(error);
-//   return;
-//   }
-//   var information=JSON.parse(Request.responseText);
-//   // console.log(information);
-//   // console.log(information.articles.length +"length");
-//   //loop to iterate through json object from API and store respective article title, link, date.
-//   for (var index=0;index<4;index++){
-//     var title= " " +information.articles[index].title;
-//     // console.log(information.articles[index].title +"titles");
-//     var urlink=information.articles[index].url;
-//     var date=information.articles[index].publishedAt;
-
-//     // console.log(title);
-//     // console.log(urlink);
-
-// //create HTML elements to display the article headline titles, links and dates on the panel.
-//     var para=document.createElement("P");
-//     var link=document.createElement('a');
-//     var paragraph=document.createElement("P");
-//     var paragraph2=document.createElement("P");
-//     link.setAttribute('href',urlink);
-
-//     link.setAttribute("style", "background-color:none;font-family: Arial; color:white; font-size:15px; font-weight:bold; text-align:center;text-decoration:underline");
-//     link.innerHTML=" " +title;
-//     link.target="_blank";
-//     para.innerHTML="";
-//     paragraph.setAttribute("style","font-family:Arial; color:black;font-size:12px;");
-//     paragraph2.innerHTML="Published at: " +date;
-//     paragraph2.setAttribute("style", "font-family:Verdana; color:white; font-size:10px; font-weight:bold;");
-
-//     //append elements to the div id "latestnews"
-//     document.getElementById("latestnews").appendChild(para);
-//     document.getElementById("latestnews").appendChild(link);
-//     document.getElementById("latestnews").appendChild(para);
-//     document.getElementById("latestnews").appendChild(paragraph);
-//     document.getElementById("latestnews").appendChild(paragraph2);
+  //API Request
+  var Request=new XMLHttpRequest();
+  Request.open('GET',url, false);
+  Request.send();
 
 
-// }
-// }
+  if(Request.readyState!=4 ||  Request.status!= 200 || Request.responseText===""){
+  window.console.error("Request had an error");
+  var error=document.createElement('H3');
+  error.innerHTML="API error."
+  document.getElementById("latestnews").appendchild(error);
+  return;
+  }
+  var information=JSON.parse(Request.responseText);
+  // console.log(information);
+  // console.log(information.articles.length +"length");
+  //loop to iterate through json object from API and store respective article title, link, date.
+  for (var index=0;index<4;index++){
+    var title= " " +information.articles[index].title;
+    // console.log(information.articles[index].title +"titles");
+    var urlink=information.articles[index].url;
+    var date=information.articles[index].publishedAt;
+
+    // console.log(title);
+    // console.log(urlink);
+
+//create HTML elements to display the article headline titles, links and dates on the panel.
+    var para=document.createElement("P");
+    var link=document.createElement('a');
+    var paragraph=document.createElement("P");
+    var paragraph2=document.createElement("P");
+    link.setAttribute('href',urlink);
+
+    link.setAttribute("style", "background-color:none;font-family: Arial; color:white; font-size:15px; font-weight:bold; text-align:center;text-decoration:underline");
+    link.innerHTML=" " +title;
+    link.target="_blank";
+    para.innerHTML="";
+    paragraph.setAttribute("style","font-family:Arial; color:black;font-size:12px;");
+    paragraph2.innerHTML="Published at: " +date;
+    paragraph2.setAttribute("style", "font-family:Verdana; color:white; font-size:10px; font-weight:bold;");
+
+    //append elements to the div id "latestnews"
+    document.getElementById("latestnews").appendChild(para);
+    document.getElementById("latestnews").appendChild(link);
+    document.getElementById("latestnews").appendChild(para);
+    document.getElementById("latestnews").appendChild(paragraph);
+    document.getElementById("latestnews").appendChild(paragraph2);
+
+
+}
+}
 
 
 //function for clearing the container, specifically the elements in div id "home".

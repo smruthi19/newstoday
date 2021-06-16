@@ -472,7 +472,7 @@ function loadlatestnews(){
         //code for if user has not selected any categories and just searched keyword. Loads news in all three categories using "q=" parameter based on user's search input.
         if (counter==3){
 
-          var loadinputs=["Entertainment", "Technology", "Sports"];
+          var loadinputs=["entertainment", "technology", "sports"];
 
           for (var nocategoryindex=0; nocategoryindex<selectedcategories.length; nocategoryindex++){
             selectedcategories[nocategoryindex]=loadinputs[nocategoryindex];

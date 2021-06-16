@@ -245,7 +245,7 @@ function loadhomenews(input){
       var title= " " +information.articles[index].title;
       // console.log(information.articles[index].title +"titles");
       var urlink=information.articles[index].url;
-      var img=information.articles[index].urlToImage;
+      var img=information.articles[index].image;
       var description = information.articles[index].description;
 
       var date=information.articles[index].publishedAt;

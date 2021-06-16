@@ -77,7 +77,7 @@ function scrollwindowlink(){
                return;
                }
                var information=JSON.parse(Request.responseText);
-               // console.log(information);
+                console.log(information);
                // console.log(information.articles.length +"length");
                //loop to iterate through articles in information object, and store title, article link, image, description and date respectively for each article.
                for (var infoindex=0;infoindex<12;infoindex++){

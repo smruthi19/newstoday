@@ -506,7 +506,7 @@ var numberofblanks=0;
 //store url for API request based on user's selected category.
         var urlfirsthalf="https://gnews.io/api/v4/search?"
         categoryinput=categoryinput.toLowerCase();
-        var urlsecondhalf= "q=" + myinput + "&"+"page="+page+"&sortBy=relevance&topic=" + categoryinput + "&token=c3d778f78051de561ad0e0d91793aee8";
+        var urlsecondhalf= "q=" + myinput + "&"+"page="+page+"&sortBy=relevance&topic=" + categoryinput + "&token=b0a8f144537fb8306f5e7dd46880da8d";
         var url=urlfirsthalf+urlsecondhalf;
         // console.log("url"+url);
         var title;

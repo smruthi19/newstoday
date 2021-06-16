@@ -56,15 +56,16 @@ function scrollwindowlink(){
 
 
 // API Request based on which category link the user selected
-               var urlfirsthalf="https://newsapi.org/v2/top-headlines?";
-               var urlsecondhalf="category=" +categoryinput+ "&apiKey=bc6ba5c090bc4fe492f395b955f50e0f";
+               var urlfirsthalf="https://gnews.io/api/v4/top-headlines??";
+               var urlsecondhalf="topic=" +categoryinput+ "&token=c3d778f78051de561ad0e0d91793aee8";
                var url=urlfirsthalf+urlsecondhalf;
                // console.log("url"+url);
                var title;
                var Request=new XMLHttpRequest();
                Request.open('GET',url, false);
                Request.send();
-
+                  
+                
 
                if(Request.readyState!=4 ||  Request.status!= 200 || Request.responseText===""){
                window.console.error("Request had an error");

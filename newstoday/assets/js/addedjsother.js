@@ -504,8 +504,9 @@ var numberofblanks=0;
 
 
 //store url for API request based on user's selected category.
-        var urlfirsthalf="https://newsapi.org/v2/top-headlines?"
-        var urlsecondhalf= "q=" + myinput + "&"+"page="+page+"&sortBy=relevancy&category=" + categoryinput + "&apiKey=78b9d599c4f94f8fa3afb1a5458928d6";
+        var urlfirsthalf="https://gnews.io/api/v4/search?"
+        categoryinput=categoryinput.toLowerCase();
+        var urlsecondhalf= "q=" + myinput + "&"+"page="+page+"&sortBy=relevancy&topic=" + categoryinput + "&apiKey=c3d778f78051de561ad0e0d91793aee8";
         var url=urlfirsthalf+urlsecondhalf;
         // console.log("url"+url);
         var title;
@@ -565,7 +566,7 @@ var numberofblanks=0;
           var title= " " +information.articles[informationindex].title;
           // console.log(information.articles[informationindex].title +"titles");
           var urlink=information.articles[informationindex].url;
-          var img=information.articles[informationindex].urlToImage;
+          var img=information.articles[informationindex].image;
           var description = information.articles[informationindex].description;
 
           var date=information.articles[informationindex].publishedAt;

@@ -84,7 +84,7 @@ function scrollwindowlink(){
                  var title= " " +information.articles[infoindex].title;
                  // console.log(information.articles[infoindex].title +"titles");
                  var urlink=information.articles[infoindex].url;
-                 var img=information.articles[infoindex].urlToImage;
+                 var img=information.articles[infoindex].image;
                  var description = information.articles[infoindex].description;
 
                  var date=information.articles[infoindex].publishedAt;

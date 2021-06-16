@@ -61,7 +61,7 @@ function scrollwindowlink(){
                   
                   
                var url=urlfirsthalf+urlsecondhalf;
-               console.log("url"+url);
+                console.log(url);
                var title;
                var Request=new XMLHttpRequest();
                Request.open('GET',url, false);

@@ -54,10 +54,10 @@ function scrollwindowlink(){
                    document.getElementById("home").append(linebreak);
                    document.getElementById("home").append(linebreak);
 
-
+                   categoryinput=categoryinput.toLowerCase();
 // API Request based on which category link the user selected
                var urlfirsthalf="https://gnews.io/api/v4/top-headlines?";
-               var urlsecondhalf="topic="+categoryinput.toLowerCase()+"&token=c3d778f78051de561ad0e0d91793aee8";
+               var urlsecondhalf="topic="+categoryinput+"&token=c3d778f78051de561ad0e0d91793aee8";
                   
                   
                var url=urlfirsthalf+urlsecondhalf;

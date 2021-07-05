@@ -219,8 +219,12 @@ function loadhomenews(input){
        document.getElementById("home").appendChild(linespace);
 
 
-    var urlfirsthalf="https://newsapi.org/v2/top-headlines?";
-    var urlsecondhalf="category=" +input+ "&apiKey=78b9d599c4f94f8fa3afb1a5458928d6";
+    var urlfirsthalf="https://gnews.io/api/v4/top-headlines?";
+    var urlsecondhalf="category=" +input+ "&token=c3d778f78051de561ad0e0d91793aee8";
+  
+  
+             
+                  
     var url=urlfirsthalf+urlsecondhalf;
     // console.log("url"+url);
     var title;
@@ -453,7 +457,8 @@ function loadlatestnews(){
         // console.log("page");
 
 //functions to clear all previous content in the container.
-        clearhome();
+        clear
+        ();
         clearcontainer();
         clearpreviouslinkcontent();
         var categoryinput;

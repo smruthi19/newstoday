@@ -457,8 +457,7 @@ function loadlatestnews(){
         // console.log("page");
 
 //functions to clear all previous content in the container.
-        clear
-        ();
+        clear();
         clearcontainer();
         clearpreviouslinkcontent();
         var categoryinput;

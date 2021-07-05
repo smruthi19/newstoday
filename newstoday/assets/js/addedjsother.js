@@ -221,12 +221,12 @@ function loadhomenews(input){
 
     var urlfirsthalf="https://gnews.io/api/v4/top-headlines?";
     var urlsecondhalf="topic=" +input+ "&token=b0a8f144537fb8306f5e7dd46880da8d";
-
+    
   
   
                   
     var url=urlfirsthalf+urlsecondhalf;
-    // console.log("url"+url);
+    console.log("url"+url);
     var title;
 //API Request
     var Request=new XMLHttpRequest();

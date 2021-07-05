@@ -365,9 +365,9 @@ function loadhomenews(input){
 //function for loading latest news headlines in the right panel for users to scroll through.
 function loadlatestnews(){
   //urls to pass as parameters into requests function to load latest news headlines from the three different categories.
-  var url1="https://newsapi.org/v2/top-headlines?category=technology&apiKey=78b9d599c4f94f8fa3afb1a5458928d6";
-  var url2="https://newsapi.org/v2/top-headlines?category=sports&apiKey=78b9d599c4f94f8fa3afb1a5458928d6";
-  var url3="https://newsapi.org/v2/top-headlines?category=entertainment&apiKey=78b9d599c4f94f8fa3afb1a5458928d6";
+  var url1="https://gnews.io/api/v4/top-headlines?topic=technology&token=c3d778f78051de561ad0e0d91793aee8";
+  var url2="https://gnews.io/api/v4/top-headlines?topic=sports&token=c3d778f78051de561ad0e0d91793aee8";
+  var url3="https://gnews.io/api/v4/top-headlines?topic=entertainment&token=c3d778f78051de561ad0e0d91793aee8";
 
   requests(url1);
   requests(url2);

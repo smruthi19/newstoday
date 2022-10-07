@@ -5,7 +5,8 @@
 
 ## Description ##
 A web application using News API that allows users to search for news in the three categories of entertainment, sports, and technology and displays matching news results filtered by the categories selected. The results include the news headline, link, source, date, corresponding image, and article description. 
-Link: https://smruthi19.github.io/newstoday/newstoday/
+
+Website Link: https://smruthi19.github.io/newstoday/newstoday/
 
 # Features
 - Search news by keyword 
